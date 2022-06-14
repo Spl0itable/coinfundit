@@ -1,0 +1,936 @@
+/* reset */
+.coinpage a {
+    text-decoration: none;
+    box-shadow: none;
+}
+.coinpage a:focus, .coinpage a:active {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.cryptoboxes [data-price] {
+    display: inline-block;
+    padding: 0 4px;
+    line-height: 1.5;
+    border-radius: 4px;
+    white-space: nowrap;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.cryptoboxes .coinmc-animated {
+	-webkit-animation-duration: 1s;
+			animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+}
+.cryptoboxes .coinmc-animated.infinite {
+	-webkit-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
+}
+.cryptoboxes .liveup {
+    animation-name: liveup;
+	-webkit-animation-name: liveup;
+    animation-duration: 500;
+	-webkit-animation-duration: 500;
+}
+.cryptoboxes .livedown {
+    animation-name: livedown;
+	-webkit-animation-name: livedown;
+    animation-duration: 500;
+	-webkit-animation-duration: 500;
+}
+.coinpage .cryptoboxes .coin-price.liveup {
+    animation-name: liveupcolor;
+	-webkit-animation-name: liveupcolor;
+    animation-duration: 500;
+	-webkit-animation-duration: 500;
+}
+.coinpage .cryptoboxes .coin-price.livedown {
+    animation-name: livedowncolor;
+	-webkit-animation-name: livedowncolor;
+    animation-duration: 500;
+	-webkit-animation-duration: 500;
+}
+@-webkit-keyframes liveup {
+    0%  { background:rgba(0,255,0,0.3);}
+    50%  { background:rgba(0,255,0,0.6);}
+    100%  { background:rgba(0,255,0,0.3);}
+}
+@-moz-keyframes liveup {
+    0%  { background:rgba(0,255,0,0.3);}
+    50%  { background:rgba(0,255,0,0.6);}
+    100%  { background:rgba(0,255,0,0.3);}
+}
+@keyframes liveup {
+    0%  { background:rgba(0,255,0,0.3);}
+    50%  { background:rgba(0,255,0,0.6);}
+    100%  { background:rgba(0,255,0,0.3);}
+}
+
+@-webkit-keyframes livedown {
+    0%  { background:rgba(255,0,0,0.3);}
+    50%  { background:rgba(255,0,0,0.6);}
+    100%  { background:rgba(255,0,0,0.3);}
+}
+@-moz-keyframes livedown {
+    0%  { background:rgba(255,0,0,0.3);}
+    50%  { background:rgba(255,0,0,0.6);}
+    100%  { background:rgba(255,0,0,0.3);}
+}
+@keyframes livedown {
+    0%  { background:rgba(255,0,0,0.3);}
+    50%  { background:rgba(255,0,0,0.6);}
+    100%  { background:rgba(255,0,0,0.3);}
+}
+
+@-webkit-keyframes liveupcolor {
+    0%  { color:inherit;}
+    50%  { color:#00b09b;}
+    100%  { color:inherit;}
+}
+@-moz-keyframes liveupcolor {
+    0%  { color:inherit;}
+    50%  { color:#00b09b;}
+    100%  { color:inherit;}
+}
+@keyframes liveupcolor {
+    0%  { color:inherit;}
+    50%  { color:#00b09b;}
+    100%  { color:inherit;}
+}
+
+@-webkit-keyframes livedowncolor {
+    0%  { color:inherit;}
+    50%  { color:rgba(255,0,0,0.6);}
+    100%  { color:inherit;}
+}
+@-moz-keyframes livedowncolor {
+    0%  { color:inherit;}
+    50%  { color:rgba(255,0,0,0.6);}
+    100%  { color:inherit;}
+}
+@keyframes livedowncolor {
+    0%  { color:inherit;}
+    50%  { color:rgba(255,0,0,0.6);}
+    100%  { color:inherit;}
+}
+.invert-act img.invertable {
+	-webkit-filter: invert(80%);
+	        filter: invert(80%);
+}
+
+.fiat-symbol,
+.cryptoboxes .fiat-symbol {
+    display: inline !important;
+    font-weight: normal !important;
+}
+.coinmc-up {
+    color: #00b600;
+}
+.coinmc-down {
+    color: #fb0000;
+}
+
+/* global */
+.cryptoboxes .coinmc-ticker {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: calc(1em + 30px);
+    line-height: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all .3s;
+    user-select: none;
+}
+.cryptoboxes .coinmc-ticker .cmc-row {
+    margin: 0;
+    text-align: center;
+}
+.cryptoboxes .coinmc-ticker .coinmc-stat {
+    padding: 15px;
+}
+.cryptoboxes .coinmc-ticker-arrow {
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 1em;
+}
+.cryptoboxes .coinmc-ticker .mcw-up {
+	color: #85B000;
+}
+.cryptoboxes .coinmc-ticker .mcw-down {
+	color: #FF0033;
+}
+.cryptoboxes .coinmc-ticker span {
+    font-weight: bold;
+}
+.cryptoboxes .coinmc-ticker i {
+    transition: transform .15s;
+}
+.cryptoboxes .coinmc-ticker.cmcl-lg {
+    cursor: default;
+}
+.cryptoboxes .coinmc-ticker.cmcl-lg i {
+    display: none;
+}
+.cryptoboxes .coinmc-ticker.cmcl-md.single {
+    height: calc(2em + 60px);
+}
+.cryptoboxes .coinmc-ticker.cmcl-sm.single {
+    height: calc(3em + 90px);
+}
+.cryptoboxes .coinmc-ticker.cmcl-xs.single {
+    height: calc(5em + 150px);
+}
+.cryptoboxes .coinmc-ticker.single i {
+    transform: rotate(180deg);
+}
+.cryptoboxes .coinmc-header, .cryptoboxes .coinmc-footer {
+    width: 100%;
+    position: fixed;
+	left: 0;
+	z-index: 9999999;
+}
+.cryptoboxes .coinmc-header {
+	top: 0;
+}
+.cryptoboxes .coinmc-footer {
+	bottom: 0;
+}
+.cryptoboxes .cc-ticker-round {
+	border-radius: 5px;
+}
+.cryptoboxes .cc-white-color {
+	background: #fff;
+}
+.cryptoboxes .coinmc-ticker.coinmc-header .cc-white-color {
+	border-bottom: 1px solid #E6E6E6;
+}
+.cryptoboxes .coinmc-ticker.coinmc-footer .cc-white-color {
+	border-top: 1px solid #E6E6E6;
+}
+.cryptoboxes .coinmc-ticker.coinmc-same .cc-white-color {
+	border: 1px solid #E6E6E6;
+}
+.cryptoboxes .cc-crimson-color {
+	background: #FF0033;
+	color: #fff;
+}
+.cryptoboxes .cc-crimson-color .cc-coin .mcw-down {
+	color: #78281F;
+}
+.cryptoboxes .cc-midnight-color {
+	background: #04040C;
+	color: #fff;
+}
+.cryptoboxes .cc-green-color {
+	background: #85B000;
+	color: #fff;
+}
+.cryptoboxes .cc-orange-color {
+	background: #FF9149;
+	color: #fff;
+}
+.cryptoboxes .cc-green-color .cc-coin .mcw-up {
+	color: #186A3B;
+}
+.cryptoboxes .cc-blue-color {
+	background: #1B52A4;
+	color: #fff;
+}
+.cryptoboxes .cc-blue-color .cc-coin .mcw-down {
+	color: #E74C3C;
+}
+
+/* table */
+.cryptoboxes .coinnmc-table .title-bar {
+    border-bottom: 1px solid #e6e6e6;
+}
+.cryptoboxes .cdt-table-tools {
+    font-size: 13px;
+    border-bottom: 1px solid #e6e6e6;
+    background: #F3F7FA;
+    white-space: nowrap;
+}
+.cryptoboxes.cdt-table p {
+    display: inline;
+    margin: 0;
+}
+.cdt-table.cmcl-xs table.dataTable {
+    font-size: 13px;
+}
+.cdt-table.cmcl-xs .coin-name {
+    display: inline-block;
+    max-width: 10ch;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.cdt-table.cmcl-xs table.dataTable .coin-image img {
+    max-width: 24px;
+}
+.cdt-table.cmcl-xs .coinmc-pagination {
+    margin-top: -1rem;
+}
+.cdt-table.dark .cdt-table-tools {
+    background: rgba(18,22,41,0.22);
+    border-bottom: 1px solid #3a4458;
+}
+.cdt-table .coinmc-dt-footer.dataTables-footer {
+    display: block;
+    padding: 0;
+    font-size: 13px;
+    white-space: nowrap;
+    border-top: 5px solid transparent;
+}
+.cdt-table .dataTables_info {
+    display: inline-block;
+    padding: 10px 0;
+    opacity: 0.7;
+    font-weight: bold;
+}
+.cdt-table .cmc-row {
+    margin: 0;
+}
+.cdt-table .datatable-scroll {
+    margin-bottom: -5px;
+    overflow: auto;
+}
+.cdt-table .dataTables_scrollBody::-webkit-scrollbar,
+.cdt-table .datatable-scroll::-webkit-scrollbar {
+    height: 5px;
+}
+.cdt-table .dataTables_scrollBody::-webkit-scrollbar-track,
+.cdt-table .datatable-scroll::-webkit-scrollbar-track {
+    background:#e9ecf5;
+}
+.cdt-table .dataTables_scrollBody::-webkit-scrollbar-thumb,
+.cdt-table .datatable-scroll::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #848ea1;
+}
+.cdt-table.dark .datatable-scroll::-webkit-scrollbar-track {
+    background:rgba(18,22,41,0.22);
+}
+.cdt-table.dark .coinmc-control {
+    color: #ccd9e8;
+    background: #313a50;
+    border: 1px solid #414b61;
+}
+.cdt-table.dark input.coinmc-control:focus, .cdt-table.dark .coinmc-button:active {
+    border: 1px solid #63708c;
+}
+.cryptoboxes .coinmc-previous-btn {
+    display: none;
+}
+.cryptoboxes .coinmc-control {
+    position: relative;
+    font-family: inherit;
+    font-size: inherit;
+    margin: 0;
+    padding: 8px 10px;
+    line-height: normal;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,0.2);
+    background-color: #fff;
+    transition: border .25s;
+    box-sizing: border-box;
+    box-shadow: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.cryptoboxes input.coinmc-control:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid rgba(0,0,0,0.4);
+}
+.cryptoboxes .coinmc-input-group {
+    display: flex;
+    position: relative;
+}
+.cryptoboxes .coinmc-input-addon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    z-index: 1;
+    opacity: 0.6;
+    transform: translateY(-50%);
+    transition: all .25s ease-in-out;
+}
+.cryptoboxes .coinmc-input-group-right .coinmc-input-addon {
+    left: auto;
+    right: 15px;
+}
+.cryptoboxes .coinmc-input-group input.coinmc-control {
+    flex: 1;
+    width: 100%;
+    padding-left: 30px;
+}
+.coinmc-dropdown-active .coinmc-input-addon {
+    margin-top: -2px;
+    transform: translateY(-50%) scale(-1);
+}
+.cryptoboxes .coinmc-button {
+    width: 100%;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+    text-align: center;
+}
+.cryptoboxes .coinmc-button i {
+    font-style: normal;
+    opacity: 0.6;
+    margin: 0 5px;
+}
+.cryptoboxes .coinmc-button:focus {
+    outline: none;
+}
+.cryptoboxes .coinmc-button:active {
+    border: 1px solid rgba(0,0,0,0.4);
+}
+.cryptoboxes .coinmc-button.dark {
+    color: #fff;
+    background: #495057;
+}
+.cryptoboxes .coinmc-dropdown-select .coinmc-button {
+    text-align: left;
+}
+.cryptoboxes .coinmc-dropdown-active .coinmc-button {
+    border: 1px solid rgba(0,0,0,0.4);
+}
+.cryptoboxes .coinmc-dropdown__list,
+.tippy-content .coinmc-dropdown__list {
+    display: none;
+    font-size: 13px;
+    font-weight: normal;
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+.tippy-content .coinmc-dropdown__list {
+    display: block;
+}
+.tippy-content .coinmc-dropdown__list.coinmc-dropdown-overflow {
+    max-height: 170px;
+    overflow-y: scroll;
+}
+.tippy-content .coinmc-dropdown__list::-webkit-scrollbar {
+    width: 5px;
+}
+.tippy-content .coinmc-dropdown__list::-webkit-scrollbar-track {
+    background: none;
+}
+.tippy-content .coinmc-dropdown__list::-webkit-scrollbar-thumb {
+    background: #d0d0d0;
+    border: 1px solid #fff;
+    border-radius: 3px;
+}
+.tippy-content .coinmc-dropdown__list::-webkit-scrollbar-thumb:hover {
+    background: #d0d0d0; 
+}
+.tippy-tooltip.dark-theme .coinmc-dropdown__list:hover::-webkit-scrollbar-thumb {
+    background: #63708c;
+}
+.tippy-content .coinmc-dropdown__list .coinmc-dropdown__item {
+    margin: 0;
+    white-space: nowrap;
+    text-align: left;
+    text-overflow: ellipsis;
+    pointer-events: all;
+}
+.tippy-content .coinmc-dropdown__list .coinmc-dropdown__item a {
+    display: inline-block;
+    width: 100%;
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.tippy-content .coinmc-dropdown__list .coinmc-dropdown__item i {
+    opacity: 0.6;
+    font-style: normal;
+    margin: 0 5px;
+}
+.tippy-content .coinmc-dropdown__list .coinmc-dropdown__item:hover {
+    background: #F8FAFB;
+}
+.tippy-tooltip.dark-theme .coinmc-dropdown__list .coinmc-dropdown__item:hover {
+    background: #0a0a13;
+}
+
+/* tippy themes */
+.tippy-tooltip {
+    border-radius: 5px;
+}
+.tippy-tooltip[data-animatefill]{
+    background-color:transparent
+}
+.tippy-tooltip.light-theme {
+    color:#656565;
+    box-shadow: 2px 2px 2px #ccc;
+    background-color:#fff;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+.tippy-tooltip.light-theme .tippy-backdrop {
+    background-color:#fff;
+}
+.tippy-tooltip.dark-theme {
+    color: #ccd9e8;
+    background: #1a1d2d;
+}
+.tippy-tooltip.dropdown-theme {
+    padding: 0;
+}
+.tippy-tooltip.dropdown-theme a {
+    padding: 12px 10px;
+}
+.tippy-popper[x-placement^=bottom] .tippy-tooltip.dark-theme .tippy-arrow {
+    border-bottom: 8px solid #1a1d2d;
+}
+
+/* single page */
+.coinpage .coin-name {
+    display: flex;
+    align-items: center;
+    color: #495057;
+    font-size: 2em;
+    font-weight: bold;
+}
+.coinpage .coin-name img {
+    margin-right: 10px;
+}
+.coinpage .coin-symbol {
+    display: inline-block;
+    color: #1c72de;
+    background: rgba(28, 114, 222, 0.2);
+    font-size: .5em;
+    padding: 6px 12px;
+    border-radius: 3px;
+    margin: 0 10px;
+    line-height: 1em;
+}
+.coinpage .coin-price {
+    font-size: 2em;
+    line-height: 2em;
+    font-weight: bold;
+}
+.coinpage .coin-price span {
+    font-size: 1.6em;
+}
+.coinpage .cmc-stats {
+    color: #495057;
+    font-weight: bold;
+}
+.coinpage .cmc-stats .stat-label {
+    opacity: 0.6;
+    padding-bottom: 10px;
+}
+.coinpage .cmc-stats .stat-value {
+    font-size: 1.1em;
+    white-space: nowrap;
+}
+.coinpage .coinmc-cta .coinmc-button {
+    display: flex;
+    color: inherit;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,0.2);
+    text-align: center;
+    box-shadow: 0px -4px inset rgba(0, 0, 0, 0.2);
+    transition: all .15s;
+}
+.coinpage .coinmc-cta .coinmc-button i {
+    margin-right: 5px;
+}
+.coinpage .coinmc-cta .coinmc-button:active {
+    box-shadow: none;
+    margin-top: 4px;
+    height: 46px;
+}
+.coinpage .coinmc-cta .coinmc-button-success {
+    color: #fff;
+    background: #00b09b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #96c93d, #00b09b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #96c93d, #00b09b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
+}
+.coinpage .coinmc-cta .coinmc-button-danger {
+    color: #fff;
+    background: #cb2d3e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ef473a, #cb2d3e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ef473a, #cb2d3e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
+}
+
+/* links */
+.coinpage ul.coinmc-links {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    font-size: 1.1em;
+}
+.coinpage ul.coinmc-links li {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.coinpage ul.coinmc-links li a {
+    color: #495057;
+    text-decoration: none;
+}
+.coinpage ul.coinmc-links li a i {
+    margin-right: 5px;
+}
+/* calculator */
+.coinmc-calculator .coinmc-form-control {
+    position: relative;
+    margin: 10px 0;
+}
+.coinmc-calculator .coinmc-dropdown {
+    position: absolute;
+    display: inline-block;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+}
+.coinmc-calculator .coinmc-button {
+    color: #fff;
+    background: #495057;
+    font-size: 1.1em;
+    font-weight: bold;
+    white-space: nowrap;
+    padding: 15px 45px 15px 15px;
+}
+.coinmc-calculator .coinmc-input-addon {
+    color: #fff;
+}
+.coinmc-calculator input.coinmc-control {
+    padding: 20px;
+    width: 100%;
+    height: auto !important;
+    font-size: 1.1em;
+    text-align: right;
+}
+.coinmc-calculator .coinmc-form-swap {
+    cursor: pointer;
+    font-size: 1.2em;
+}
+/* tabs */
+.cryptoboxes ul.coinmc-tabs-list {
+    list-style: none;
+    margin: 0;
+    margin-bottom: 1.75em !important;
+    padding-left: 0;
+    border-bottom: 1px solid #e9ecef;
+}
+.cryptoboxes ul.coinmc-tabs-list li {
+    position: relative;
+    color: #495057;
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+    opacity: 0.6;
+    text-align: center;
+}
+.cryptoboxes ul.coinmc-tabs-list li i {
+    margin: 10px;
+    margin-left: 0;
+}
+.cryptoboxes ul.coinmc-tabs-list li.active, .cryptoboxes ul.coinmc-tabs-list li:hover {
+    opacity: 1;
+}
+.cryptoboxes ul.coinmc-tabs-list li:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #1c72de;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width .25s;
+}
+.cryptoboxes ul.coinmc-tabs-list li.active:after {
+    width: 100%;
+}
+.cryptoboxes .coinmc-tabs .coinmc-tab-content {
+    display: none;
+}
+.cryptoboxes .coinmc-tabs .coinmc-tab-content.active {
+    display: block;
+}
+.cmcl-xs ul.coinmc-tabs-list {
+    display: flex;
+}
+.cmcl-xs ul.coinmc-tabs-list li {
+    flex: 1;
+    padding: 20px 0;
+}
+.cmcl-xs ul.coinmc-tabs-list li i {
+    margin: 0;
+}
+.cmcl-xs ul.coinmc-tabs-list li.active {
+    border-left: 1px solid #e9ecef;
+    border-right: 1px solid #e9ecef;
+}
+.cmcl-xs ul.coinmc-tabs-list li:after {
+    bottom: auto;
+    top: 0;
+}
+.cmcl-xs ul.coinmc-tabs-list li.active:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    bottom: -1px;
+    left: 0;
+}
+.cmcl-xs ul.coinmc-tabs-list li span {
+    display: none;
+}
+.cmcl-sm ul.coinmc-tabs-list li i {
+    display: block;
+}
+
+/* chart */
+.cryptoboxes .coinmc-chart .chart-wrapper {
+    width: 100%;
+    height: 400px;
+    padding: 10px;
+    border-radius: 5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+}
+.cryptoboxes .coinmc-chart .coinmc-filter {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+.cryptoboxes .coinmc-chart .coinmc-filter li {
+    color: #495057;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 14px;
+}
+.cryptoboxes .coinmc-chart .coinmc-filter .coinmc-filter-button {
+    color: #495057;
+    background: #e9ecef;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.cryptoboxes .coinmc-chart .coinmc-filter .coinmc-filter-button.active {
+    color: #f2f2f2;
+    background: #495057;
+}
+.cryptoboxes .coinmc-chart .coinmc-filter .coinmc-filter-label {
+    opacity: 0.6;
+    padding: 0 10px;
+}
+.cryptoboxes .coinmc-chart .chart-wrapper.no-data {
+    border: 5px solid #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+.cryptoboxes .coinmc-chart .chart-wrapper.no-data * {
+    display: none;
+}
+.cryptoboxes .coinmc-chart .chart-wrapper.no-data:before{
+    content: 'No data Available';
+    width: 100%;
+    text-align: center;
+}
+/* social */
+.cryptoboxes ul.coinmc-twitter,
+.cryptoboxes ul.coinmc-reddit,
+.cryptoboxes ul.coinmc-news {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    border: 3px solid #e9ecef;
+    border-radius: 10px;
+    max-height: 800px;
+    overflow-y: scroll;
+}
+.cryptoboxes ul.coinmc-reddit .coinmc-r-heading {
+    display: flex;
+    align-items: center;
+    padding: 12px 10px;
+    border-bottom: 1px solid rgba(15,70,100,.12);
+}
+.cryptoboxes ul.coinmc-reddit .coinmc-r-heading i {
+    color: #ff1001;
+    font-size: 2em;
+    margin-right: 10px;
+}
+.cryptoboxes ul.coinmc-reddit .coinmc-r-heading .coinmc-r-sub {
+    font-size: 1.4em;
+}
+.cryptoboxes ul.coinmc-reddit li {
+    padding: 10px 0;
+    line-height: 1.3em;
+}
+.cryptoboxes ul.coinmc-reddit .coinmc-r-thread {
+    display: flex;
+}
+.cryptoboxes ul.coinmc-reddit .coinmc-r-media {
+    margin-right: 20px;
+}
+.cryptoboxes ul.coinmc-reddit .coinmc-r-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #e9ecef;
+    background-image: url(/modules/cfd0ac86/assets/public/img/reddit.png);
+    background-size: cover;
+    background-position: center;
+}
+.cryptoboxes ul.coinmc-reddit a.coinmc-r-title {
+    color: #228be6;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-bottom: 10px;
+}
+.cryptoboxes ul.coinmc-reddit .coinmc-r-author, .cryptoboxes ul.coinmc-reddit .coinmc-r-stat {
+    color: #495057;
+    font-size: .9em;
+}
+.cryptoboxes ul.coinmc-reddit .coinmc-r-author {
+    color: #abb0b5;
+}
+.cryptoboxes ul.coinmc-reddit .coinmc-r-stat i {
+    font-size: 0.8em;
+    margin-left: 10px;
+}
+.cryptoboxes ul.coinmc-reddit .coinmc-r-stat i:first-child {
+    margin-left: 0;
+}
+
+/* news */
+.cryptoboxes ul.coinmc-news {
+    list-style: none;
+    text-align: left;
+}
+.cryptoboxes ul.coinmc-news li {
+    color: #495057;
+    padding-bottom: 20px;
+    line-height: 1.5em;
+}
+.cryptoboxes ul.coinmc-news .coinmc-n-single {
+    display: flex;
+}
+.cryptoboxes ul.coinmc-news .coinmc-n-media {
+    margin-right: 20px;
+}
+.cryptoboxes ul.coinmc-news .coinmc-n-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    background-image: url(/modules/cfd0ac86/assets/public/img/rss.png);
+    background-size: cover;
+    background-position: center;
+}
+.cryptoboxes ul.coinmc-news .coinmc-n-content {
+    width: 100%;
+}
+.cryptoboxes ul.coinmc-news a.coinmc-n-title {
+    color: #495057;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+}
+.cryptoboxes ul.coinmc-news a.coinmc-n-title:hover {
+    text-decoration: underline;
+}
+.cryptoboxes ul.coinmc-news .coinmc-n-stat {
+    color: #abb0b5;
+}
+
+/* nice scroll */
+.cryptoboxes .coinmc-nice-scroll::-webkit-scrollbar {
+    width: 5px;
+}
+.cryptoboxes .coinmc-nice-scroll::-webkit-scrollbar-track {
+    background: none;
+}
+.cryptoboxes .coinmc-nice-scroll::-webkit-scrollbar-thumb {
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 3px;
+}
+.cryptoboxes .coinmc-nice-scroll:hover::-webkit-scrollbar-thumb {
+    background: #d0d0d0; 
+}
+/* flat picker */
+.cryptoboxes .flatpickr-wrapper {
+    width: 100%;
+}
+.cryptoboxes .flatpickr-calendar.static.rightMost {
+    right: 0;
+}
+.global-perct {
+    margin: 0 0 0 8px;
+}
+.global-perct.uptrend {    
+    color: #13c24e;
+}
+.global-perct.downtrend {
+    color: #ff3026;
+}
+/* tab widget responsive on mobile */
+@media(max-width: 767px){
+    .cryptoboxes .coinmc-chart .coinmc-filter {
+        width: 100%;
+        overflow-x: scroll;
+        display: inline-flex;
+        align-items: center;
+        padding-left: 60px;
+    }
+    .cryptoboxes .coinmc-chart .coinmc-filter::-webkit-scrollbar {
+        display: none;
+    }
+    .cryptoboxes .coinmc-chart .coinmc-filter {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .cryptoboxes .coinmc-chart .coinmc-filter li:first-child{
+        position: absolute;
+        left: 0;
+        background: #fff;
+        width: 60px;
+    }
+    .cryptoboxes .coinmc-chart .coinmc-filter .coinmc-filter-label {
+        padding: 10px 10px;
+    }
+    .cryptoboxes .coinmc-chart .coinmc-filter .coinmc-filter-button {
+        white-space: nowrap;
+        margin: 0;
+    }
+}
