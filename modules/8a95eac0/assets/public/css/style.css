@@ -1,0 +1,2045 @@
+/*********** selectize **********/
+.cryptoboxes .selectize-input > input {
+	margin: 0 2px 0 0 !important;
+}
+.cryptoboxes .selectize-control.multi .selectize-input.disabled > div,
+.cryptoboxes .selectize-control.multi .selectize-input.disabled > div.active {		
+	color: #7d7d7d;		
+	background: #ffffff;		
+	border: 0 solid #ffffff;		
+}
+.cryptoboxes .selectize-control.multi .selectize-input > div.active {
+	background: #e8e8e8;
+	color: #303030;
+	border: none;
+}
+.cryptoboxes .selectize-control.multi .selectize-input > div {
+	margin: 0 3px 3px 0;
+	padding: 2px 6px;
+	background: #f2f2f2;
+	color: #303030;
+	border: none;
+}
+.cryptoboxes .selectize-control.multi .selectize-input.has-items {
+	padding: 6px 8px 3px;
+}
+.cryptoboxes .selectize-input, .cryptoboxes .selectize-dropdown {
+	border: 1px solid #d0d0d0;
+	font-size: 0.85em;
+}
+
+@font-face {
+  font-family: "massive-crypto";
+  src:url("/modules/8a95eac0/assets/public/fonts/massive-crypto.eot?v");
+  src:url("/modules/8a95eac0/assets/public/fonts/massive-crypto.eot?v#iefix") format("embedded-opentype"),
+    url("/modules/8a95eac0/assets/public/fonts/massive-crypto.woff?v") format("woff"),
+    url("/modules/8a95eac0/assets/public/fonts/massive-crypto.ttf?v") format("truetype"),
+    url("/modules/8a95eac0/assets/public/fonts/massive-crypto.svg?v#massive-crypto") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="micon-"]:before,
+[class*=" micon-"]:before {
+  font-family: "massive-crypto" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.fiat-symbol,
+.cryptoboxes .fiat-symbol {
+    display: inline !important;
+    font-weight: normal !important;
+}
+.cryptoboxes .mcw-up, .cryptoboxes .mcw-down {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: bottom;
+}
+.micon-arrow-up, .micon-arrow-down {
+    display: flex;
+}
+.micon-arrow-up:before {
+	content: "\61";
+}
+.micon-arrow-down:before {
+	content: "\62";
+}
+.micon-arrow-circle-o-left:before {
+	content: "\65";
+}
+.micon-arrow-circle-o-right:before {
+	content: "\66";
+}
+.micon-info-circled:before {
+	content: "\68";
+}
+.micon-star:before {
+	content: "\69";
+}
+.micon-world:before {
+	content: "\6a";
+}
+.micon-envelope:before {
+	content: "\6b";
+}
+.micon-up-open:before {
+	content: "\67";
+}
+.micon-down-open:before {
+	content: "\6c";
+}
+.micon-times:before {
+    content: "\63";
+}
+.micon-bars:before {
+    content: "\64";
+}
+/* themes */
+.cryptoboxes .mcw-dark-theme,
+.cryptoboxes .mcw-midnight-theme,
+.cryptoboxes .mcw-info-theme,
+.cryptoboxes .mcw-warning-theme,
+.cryptoboxes .mcw-danger-theme,
+.cryptoboxes .mcw-success-theme {
+    color: #fff !important;
+}
+.cryptoboxes .mcw-white-theme {
+    color: #565656 !important;
+}
+.cryptoboxes .mcw-white-theme {
+    background: #fff;
+}
+.cryptoboxes .mcw-dark-theme {
+    background: #000;
+}
+.cryptoboxes .mcw-midnight-theme {
+    background: #293145;
+}
+.cryptoboxes .mcw-info-theme {
+    background: #5073F5;
+}
+.cryptoboxes .mcw-warning-theme {
+    background: #ff7d19;
+}
+.cryptoboxes .mcw-danger-theme {
+    background: #FF0033;
+}
+.cryptoboxes .mcw-success-theme {
+    background: #85B000;
+}
+
+.cryptoboxes * {
+	-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+.cryptoboxes article, .cryptoboxes aside, .cryptoboxes details, .cryptoboxes figcaption, .cryptoboxes figure, .cryptoboxes footer, .cryptoboxes header, .cryptoboxes hgroup, .cryptoboxes menu, .cryptoboxes nav, .cryptoboxes section {
+	display: block;
+}
+.cryptoboxes ol, .cryptoboxes ul {
+    list-style: none !important;
+    margin: 0 !important;
+}
+.cryptoboxes blockquote, .cryptoboxes q {
+	quotes: none;
+}
+.cryptoboxes blockquote:before, .cryptoboxes blockquote:after, .cryptoboxes q:before, .cryptoboxes q:after {
+	content: '';
+	content: none;
+}
+.cryptoboxes .invert-act img.invertable,
+.cryptoboxes.invert-act img.invertable {
+	-webkit-filter: invert(80%);
+	        filter: invert(80%);
+}
+.cryptoboxes .invert-act .bg img.invertable {
+	-webkit-filter: grayscale(80%) invert(80%);
+	        filter: grayscale(80%) invert(80%);
+}
+.cryptoboxes a.mcw-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*---TICKER STYLES----*/
+.cryptoboxes .mcw-ticker {
+	visibility: hidden;
+	overflow: hidden;
+}
+.cryptoboxes .mcw-ticker.mcw-header, .cryptoboxes .mcw-ticker.mcw-footer {
+    width: 100%;
+    position: fixed;
+	left: 0;
+	z-index: 9999999;
+}
+.cryptoboxes .mcw-ticker.mcw-header {
+	top: 0;
+}
+.cryptoboxes .mcw-ticker.mcw-footer {
+	bottom: 0;
+}
+.cryptoboxes .cc-ticker-round {
+	border-radius: 5px;
+}
+.cryptoboxes .cc-stats {
+    margin: 0 !important;
+	border: 0 none !important;
+    white-space: nowrap;
+    list-style: none !important;
+    line-height: 1em;
+}
+.cryptoboxes .cc-stats .cc-coin {
+    display: inline-flex;
+    align-items: center;
+	margin: 0 !important;
+	padding: 10px !important;
+    border: 0 none !important;
+}
+.cryptoboxes .cc-stats .cc-coin div b {
+	font-weight: normal !important;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.cryptoboxes .cc-coin .coin-img {
+    margin-right: 10px;
+    height: 25px;
+}
+.cryptoboxes [data-price] {
+    display: inline-block;
+    padding: .3em;
+    line-height: 1;
+    border-radius: 4px;
+	white-space: nowrap;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.cryptoboxes .cc-coin > div {
+	position: relative;
+}
+.cryptoboxes .cc-coin svg {
+    width: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.cryptoboxes .cc-coin:before {
+	display: none;
+}
+.cryptoboxes .cc-coin .mcw-down {
+	color: #FF0033;
+}
+.cryptoboxes .cc-coin .mcw-up {
+	color: #85B000;
+}
+.cryptoboxes a.cc-coin:hover {
+    background: rgba(255,255,255,0.1);
+}
+.cryptoboxes .cc-ticker.mcw-white-theme a.cc-coin:hover {
+    background: rgba(0,0,0,0.02);
+}
+.cryptoboxes .mcw-ticker.mcw-header .mcw-white-theme {
+	border-bottom: 1px solid #E6E6E6;
+}
+.cryptoboxes .mcw-ticker.mcw-footer .mcw-white-theme {
+	border-top: 1px solid #E6E6E6;
+}
+
+/*--web ticker---*/
+.cryptoboxes .cc-stats {
+	font-size: 14px !important;
+}
+.cryptoboxes .cc-stats {
+	position:relative;
+	width:100%;
+	-webkit-animation: ticker 0s linear infinite 0s normal;
+	   -moz-animation: ticker 0s linear infinite 0s normal;
+			animation: ticker 0s linear infinite 0s normal;
+}
+.cryptoboxes:hover .cc-stats {
+	-webkit-animation-play-state: paused;
+	   -moz-animation-play-state: paused;
+			animation-play-state: paused;
+}
+.cryptoboxes .cc-stats .cc-dup {
+	display: inline;
+}
+@-webkit-keyframes ticker {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes ticker {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+.cryptoboxes .mcw-card-head {
+    line-height: 1;
+}
+.cryptoboxes .mcw-card-head > div {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.cryptoboxes .cc-coin img {
+    vertical-align: top;
+}
+.cryptoboxes .mcw-card-head p {
+    font-size: inherit;
+    font-weight: normal;
+    padding-left: 10px !important;
+	margin: 0 !important;
+	word-break: break-word;
+}
+
+/* style 2 */
+.cryptoboxes .mcw-ticker-2 .cc-stats {
+    padding: 0 !important;
+}
+.cryptoboxes .mcw-ticker-2 .coin-name {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+.cryptoboxes .mcw-ticker-2 .coin-name img {
+    margin-right: 5px;
+}
+.cryptoboxes .mcw-ticker-2 .coin-name span {
+    opacity: 0.6;
+}
+.cryptoboxes .mcw-ticker-2 .coin-chart {
+    margin-left: 20px;
+}
+.cryptoboxes .mcw-ticker-2 .mcw-price {
+    font-size: 1.1em;
+    line-height: 1.5;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: left;
+}
+.cryptoboxes .mcw-ticker-2 .cc-stats .cc-coin {
+    position: relative;
+    padding: 20px !important;
+}
+.cryptoboxes .mcw-ticker-2 .cc-coin::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 80%;
+    right: 0;
+    background: rgba(255,255,255,0.2);
+}
+.cryptoboxes .mcw-ticker-2 .mcw-white-theme .cc-coin::after {
+    background: rgba(0,0,0,0.1);
+}
+.cryptoboxes .mcw-ticker .mcw-price {
+    margin-left: -0.3em;
+}
+
+/*---CARDS---*/
+.cryptoboxes .mcw-card {
+    fill: #fff;
+	display: inline-block;
+	margin-right: 0.5rem;
+	margin-left: 0.5rem;
+	margin-bottom: 1rem;
+	overflow: hidden;
+	min-width: 360px;
+	max-width: calc(100% - 1rem);
+	vertical-align: top;
+	-webkit-box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.1) !important;
+			box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.1) !important;
+	-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+}
+.cryptoboxes .mcw-card.mcw-stretch, .cryptoboxes .mcw-label.mcw-stretch {
+	width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+    max-width: 100%;
+    min-width: auto;
+}
+.cryptoboxes .cc-label-col {
+	vertical-align: top;
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.cryptoboxes .mcw-card.mcw-white-theme {
+    fill: #000;
+}
+.cryptoboxes .mcw-card .mcw-pricelabel {
+	margin-top: 30px;
+}
+.cryptoboxes .mcw-card .mcw-price {
+	font-size: 220%;
+	padding: 0 8px;
+    display: inline-block;
+    line-height: 1.5;
+}
+.cryptoboxes .mcw-card.mcw-dark-theme h2, .cryptoboxes .mcw-card.mcw-dark-theme th {
+	color: #fff;
+}
+.cryptoboxes .mcw-card .mcw-up, .cryptoboxes .mcw-card .mcw-down {
+    position: relative;
+    vertical-align: text-bottom;
+}
+.cryptoboxes .mcw-card .mcw-up {
+	color: #28D094 !important;
+}
+.cryptoboxes .mcw-card .mcw-down {
+	color: #FF4961 !important;
+}
+.cryptoboxes .mcw-card.mcw-warning-theme .mcw-up, .cryptoboxes .mcw-card.mcw-success-theme .mcw-up {
+	color: #1a8e06;
+}
+.cryptoboxes .mcw-card.mcw-info-theme .mcw-down, .cryptoboxes .mcw-card.mcw-danger-theme .mcw-down {
+	color: #78281F;
+}
+
+/*---Card Designs---*/
+/*-card 1&2 design-*/
+.cryptoboxes .mcw-card-1 {
+	position: relative;
+	padding: 20px 20px 10px 20px;
+	text-align: left;
+}
+.cryptoboxes .mcw-rounded {
+	border-radius: 5px;
+}
+.cryptoboxes .mcw-card-1 .bg {
+	position: absolute;
+	height: 100%;
+	right: 0;
+	top: 20px;
+}
+.cryptoboxes .mcw-card-1 .bg img {
+    display: block;
+    max-width: 100%;
+	height: 100%;
+	opacity: 0.1;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	background: none;
+	border: none;
+}
+.cryptoboxes .mcw-card-1 .mcw-price {
+	display: inline;
+	margin-left: -8px;
+}
+.cryptoboxes .mcw-card-2 {
+	padding: 20px;
+	text-align: center;
+}
+.cryptoboxes .mcw-card-2 .mcw-price {
+	font-weight: bold;
+	display: inline-block;
+	margin: 0 10px 10px;
+}
+.cryptoboxes .mcw-card-2 .mcw-card-head {
+	margin-top: 5px;
+}
+
+/*-card 3 design-*/
+.cryptoboxes .mcw-card-3 {
+	position: relative;
+}
+.cryptoboxes .mcw-card-3 li {
+	padding: 20px 30px;
+}
+.cryptoboxes .mcw-card-3 .mcw-card-symbol {
+	font-size: 85%;
+}
+.cryptoboxes .mcw-card-3 .mcw-card-name,
+.cryptoboxes .mcw-card-3 .mcw-price {
+	font-size: 140%;
+	text-align: left !important;
+    display: inline;
+    line-height: 1.5;
+}
+.cryptoboxes .mcw-card-3 .mcw-price {
+	margin-right: -10px;
+}
+.cryptoboxes .mcw-card-3 .mcw-pricelabel {
+	margin: 0;
+}
+.cryptoboxes .mcw-card-3 > div {
+	display: flex;
+	justify-content: space-between;
+	text-align: left;
+}
+.cryptoboxes .mcw-card-3 > div:last-child li {
+	padding-top: 0;
+}
+.cryptoboxes .mcw-card-3 ul:last-child {
+	text-align: right;
+}
+.cryptoboxes .mcw-card-3 .mcw-dn3-body {
+    background: rgba(255,255,255,0.2);
+}
+.cryptoboxes .mcw-card-3 .mcw-card-percent,
+.cryptoboxes .mcw-card-3 .mcw-card-marketcap {
+    line-height: 1.5;
+}
+/*-card 4 design-*/
+.cryptoboxes .mcw-card-4 {
+	padding: 20px;
+	text-align: center;
+}
+.cryptoboxes .mcw-card-4 .header {
+	padding: 20px;
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	background: rgba(255,255,255,0.1);
+}
+.cryptoboxes .mcw-card-4.mcw-white-theme .header {
+	background: rgba(0,0,0,0.1);
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.cryptoboxes .mcw-card-4 .mcw-price {
+    display: inline;
+}
+.cryptoboxes .mcw-card-5 {
+	padding: 20px;
+	text-align: center;
+	position: relative;
+}
+.cryptoboxes .mcw-card-5 .header {
+	padding: 10px 0 20px 0;
+}
+.cryptoboxes .mcw-card-5 .mcw-card-marketcap {
+	margin: 10px -20px;
+	padding: 5px;
+	background: rgba(255,255,255,0.05);
+}
+.cryptoboxes .mcw-card-5 .mcw-price {
+    display: inline;
+}
+.cryptoboxes .mcw-card-5.mcw-white-theme .mcw-card-marketcap {
+	background: rgba(0,0,0,0.1);
+}
+.cryptoboxes .mcw-card-6 {
+	padding: 10px;
+	text-align: center;
+}
+.cryptoboxes .mcw-card-6 .mcw-dn6-head,
+.cryptoboxes .mcw-card-6 .mcw-dn6-body {
+	padding: 10px;
+}
+.cryptoboxes .mcw-card-6 li {
+	display: inline-block;
+	vertical-align: top;
+    width: 30%;
+    margin: 0 1.5%;
+    box-sizing: border-box;
+}
+.cryptoboxes .mcw-card-6 table th, .cryptoboxes .mcw-card-6 table td {
+	padding: 5px;
+}
+
+.cryptoboxes .mcw-card-7 {
+	width: 100%;
+	max-width: 900px;
+	font-weight: 800;
+	text-align: center;
+	padding: 20px;
+}
+
+.cryptoboxes .mcw-card-7 .mcw-price svg {
+    vertical-align: middle;
+}
+
+.cryptoboxes .mcw-card-7 .mcw-card-head {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 50px;
+}
+
+.cryptoboxes .mcw-card-7 .mcw-head-symbol {
+	font-size: 100px;
+	font-weight: 300;
+	vertical-align: middle;
+}
+
+.cryptoboxes .mcw-card-7 .mcw-card-body {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+	font-size: 20px;
+	flex-wrap: wrap;
+}
+
+.cryptoboxes .mcw-card-7 .mcw-card-body > div {
+    position: relative;
+    padding: 20px;
+}
+
+.cryptoboxes .mcw-card-7 .mcw-card-name span {
+    font-size: 18px;
+    vertical-align: top;
+}
+
+.cryptoboxes .mcw-card-7 .mcw-card-name img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto !important;
+}
+
+.cryptoboxes .mcw-card-7 .mcw-card-name > div {
+    line-height: 24px;
+    margin: 0 !important;
+    padding-left: 60px;
+    font-size: 40px;
+}
+
+.cryptoboxes .mcw-card-7 .mcw-card-body .mcw-changes {
+    text-align: left;
+}
+
+.cryptoboxes .mcw-card-7 .mcw-card-body .mcw-changes span.mcw-up, .cryptoboxes .mcw-card-7 .mcw-card-body .mcw-changes span.mcw-down {
+    display: block;
+    line-height: 1.5;
+}
+
+.cryptoboxes .mcw-card-7 .mcw-toggle {
+    display: flex;
+    font-size: 15px;
+}
+
+.cryptoboxes .mcw-card-7 .mcw-toggle-switch {
+    padding: 10px 30px;
+    border: 1px solid #000;
+    border-right: 0;
+    cursor: pointer;
+}
+.cryptoboxes .mcw-toggle-switch:first-child {
+    border-radius: 20px 0 0 20px;
+}
+.cryptoboxes .mcw-card-7 .mcw-toggle-switch:last-child {
+    border-radius: 0 20px 20px 0;
+    border-right: 1px solid #000;
+}
+
+.cryptoboxes .mcw-card-7 .mcw-changes {
+    display: flex;
+}
+
+.cryptoboxes .mcw-card-7 .mcw-changes > div:last-child {
+    padding-left: 20px;
+}
+
+.cryptoboxes .mcw-card-7 .mcw-toggle-switch.active {
+	background-color: rgba(255,255,255,0.1);
+}
+.cryptoboxes .mcw-card-7.mcw-white-theme .mcw-toggle-switch.active {
+    color: #fff;
+	background-color: #000;
+}
+.cryptoboxes .mcw-card-7 {
+	border: none !important;
+	box-shadow: none !important;
+}
+
+.cryptoboxes .mcw-card-7.mcw-stretch {
+	display: block;
+	margin: 20px auto;
+}
+
+@media (max-width: 1023px) {
+    .cryptoboxes .mcw-card-7 .mcw-card-head {
+        font-size: 40px;
+	}
+	.cryptoboxes .mcw-card-7 .mcw-head-symbol {
+		font-size: 80px;
+	}
+    .cryptoboxes .mcw-card-7 .mcw-card-body {
+        font-size: 15px;
+    }
+    .cryptoboxes .mcw-card-7 .mcw-card-name > div {
+        font-size: 30px;
+        padding-left: 20px;
+    }
+    .cryptoboxes .mcw-card-7 .mcw-card-name > div > span {
+        font-size: 8px;
+    }
+    .cryptoboxes .mcw-card-7 .mcw-card-name img {
+        max-width: 35px;
+    }
+}
+@media (max-width: 767px) {
+	.cryptoboxes .mcw-card-7 .mcw-card {
+		padding: 20px 10px;
+	}
+	.cryptoboxes .mcw-card-7 .mcw-card-head {
+		font-size: 25px;
+	}
+	.cryptoboxes .mcw-card-7 .mcw-head-symbol {
+		font-size: 50px;
+	}
+	.cryptoboxes .mcw-card-7 .mcw-card-body {
+		flex-direction: column;
+	}
+	.cryptoboxes .mcw-card-7 .mcw-card-body > div {
+		padding: 10px;
+	}
+	.cryptoboxes .mcw-card-7 .mcw-card-name > div {
+		font-size: 20px;
+		padding-left: 30px;
+	}
+  }
+
+/*---LABEL---*/
+.cryptoboxes .mcw-label {
+    display: inline-flex;
+    flex-wrap: wrap;
+	margin-right: 0.5rem;
+	margin-left: 0.5rem;
+	margin-bottom: 1rem;
+	padding: 20px;
+	min-width: 360px;
+	max-width: calc(100% - 1rem);
+	justify-content: space-between;
+    align-items: center;
+	overflow: hidden;
+	-webkit-box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.1) !important;
+			box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.1) !important;
+	-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+}
+.cryptoboxes .mcw-label.mcw-dark-theme b {
+    color: #fff;
+}
+
+.cryptoboxes .mcw-label .mcw-label-dn1-head, .cryptoboxes .mcw-label .mcw-label-dn1-body {
+    display: inline-block;
+    vertical-align: middle;
+}
+.cryptoboxes .mcw-label .mcw-label-dn1-head {
+	float: left;
+}
+.cryptoboxes .mcw-label .mcw-label-dn1-body {
+    float: right;
+    display: inline-flex;
+    align-items: center;
+}
+.cryptoboxes .mcw-label .mcw-label-dn2 {
+	min-width: 140px;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+}
+.cryptoboxes .mcw-label .mcw-label-dn2:first-child {
+	text-align: left;
+}
+.cryptoboxes .mcw-label .mcw-label-dn2 > div:not(.mcw-card-head) {
+	padding: 5px;
+}
+@media(max-width: 767px) {
+    .cryptoboxes .mcw-label .mcw-label-dn2:first-child {
+        text-align: center;
+    }
+    .cryptoboxes .mcw-label .mcw-label-dn2 {
+        flex: 1 100%;
+    }
+}
+.cryptoboxes .mcw-label > p {
+	margin: 16px 0 !important;
+}
+.cryptoboxes .mcw-label b {
+	font-weight: bold !important;
+	padding: 4px 8px;
+    border-radius: 4px;
+	margin: 0;
+}
+
+.cryptoboxes .mcw-label .mcw-up, .cryptoboxes .mcw-label .mcw-down {
+	display: inline-flex;
+	position: relative;
+}
+.cryptoboxes .mcw-label .mcw-up {
+	color: #28D094;
+}
+.cryptoboxes .mcw-label .mcw-down {
+	color: #FF4961;
+}
+.cryptoboxes .mcw-label.mcw-warning-theme .mcw-up, .cryptoboxes .mcw-label.mcw-success-theme .mcw-up {
+	color: #1a8e06;
+}
+.cryptoboxes .mcw-label.mcw-info-theme .mcw-down, .cryptoboxes .mcw-label.mcw-danger-theme .mcw-down {
+	color: #78281F;
+}
+
+
+/*---ICONS---*/
+.cryptoboxes .mcw-danger-theme .cc-coin .mcw-down {
+	color: #78281F;
+}
+.cryptoboxes .mcw-success-theme .cc-coin .mcw-up {
+	color: #186A3B;
+}
+.cryptoboxes .mcw-info-theme .cc-coin .mcw-down {
+	color: #bd1200;
+}
+.cryptoboxes .mcw-warning-theme .cc-coin .mcw-up {
+    color: #35f57c;
+}
+
+/*---CHARTS---*/
+.cryptoboxes .mcw-chart {
+    height: 400px;
+    padding: 10px;
+    border-radius: 5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0);
+}
+/*---Converter---*/
+.mcw-form-group-swap {
+    flex-direction: row-reverse;
+}
+.cryptoboxes .mcw-converter {
+	width: 100%;
+	text-align: left;
+	padding: 10px 20px;
+	border-radius: 5px;
+}
+.cryptoboxes .mcw-converter-one .mcw-input-group {
+	display: flex;
+}
+.cryptoboxes .mcw-converter-one .selectize-input {
+	width: 120px;
+	height: 100%;
+	border-radius: 5px 0 0 5px;
+	padding: 16px 10px;
+	line-height: 25px;
+	vertical-align: middle;
+}
+.cryptoboxes .mcw-converter-one .mcw-field {
+	flex: 1;
+	color: #50596c;
+	border-radius: 0 5px 5px 0;
+	border: 1px solid #b8b8b8;
+	border-left: 0;
+	margin: 0;
+	text-align: right;
+	padding: 16px;
+    font-size: 1.1em;
+    height: auto;
+    box-sizing: border-box;
+    width: 100%;
+}
+.cryptoboxes .mcw-converter-one .mcw-form-control {
+	margin: 20px 0;
+}
+.cryptoboxes .mcw-converter .selectize-input, .mcw-converter .selectize-dropdown, .selectize-dropdown.mcw-conv-style {
+	font-weight: bold;
+	color: #50596c !important;
+}
+.cryptoboxes .mcw-converter-two .mcw-form-group {
+	display: flex;
+	align-items: center;
+	margin: 10px 0;
+}
+.cryptoboxes .mcw-converter-two .mcw-form-control {
+	width: 100%;
+	flex: 3;
+}
+.cryptoboxes .mcw-converter-two .selectize-input, .cryptoboxes .mcw-converter-two .mcw-field {
+	padding: 16px 10px;
+	line-height: 25px;
+}
+.cryptoboxes .mcw-converter-two .mcw-field {
+	color: #50596c;
+	width: 100%;
+	background-color: #ffffff;
+	border-radius: 5px;
+	border: 1px solid #b8b8b8;
+	font-size: 1.1em;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+.cryptoboxes .mcw-converter-two button {
+	width: 100%;
+	background: -webkit-gradient(linear, left bottom, left top, from(#ECE9E6), to(#fff));
+	background: -webkit-linear-gradient(bottom, #ECE9E6, #fff);
+	background: -o-linear-gradient(bottom, #ECE9E6, #fff);
+	background: linear-gradient(to top, #ECE9E6, #fff);
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	padding: 20px;
+	cursor: pointer;
+	border: 1px solid #a6a6a6;
+	color: #50596c;
+	outline: 0;
+	margin-top: 10px;
+}
+.cryptoboxes .mcw-converter-two button:active {
+	background: -webkit-gradient(linear, left top, left bottom, from(#ECE9E6), to(#fff));
+	background: -webkit-linear-gradient(top, #ECE9E6, #fff);
+	background: -o-linear-gradient(top, #ECE9E6, #fff);
+	background: linear-gradient(to bottom, #ECE9E6, #fff);
+}
+.cryptoboxes .mcw-converter-two img {
+	margin: 0 auto;
+}
+.cryptoboxes .mcw-animated {
+	-webkit-animation-duration: 1s;
+			animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+}
+.cryptoboxes .mcw-animated.infinite {
+	-webkit-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
+}
+.cryptoboxes .liveup {
+    animation-name: liveup;
+	-webkit-animation-name: liveup;
+    animation-duration: 500;
+	-webkit-animation-duration: 500;
+}
+.cryptoboxes .livedown {
+    animation-name: livedown;
+	-webkit-animation-name: livedown;
+    animation-duration: 500;
+	-webkit-animation-duration: 500;
+}
+@-webkit-keyframes liveup {
+    0%  { background:rgba(0,255,0,0.3);}
+    50%  { background:rgba(0,255,0,0.6);}
+    100%  { background:rgba(0,255,0,0.3);}
+}
+@-moz-keyframes liveup {
+    0%  { background:rgba(0,255,0,0.3);}
+    50%  { background:rgba(0,255,0,0.6);}
+    100%  { background:rgba(0,255,0,0.3);}
+}
+@keyframes liveup {
+    0%  { background:rgba(0,255,0,0.3);}
+    50%  { background:rgba(0,255,0,0.6);}
+    100%  { background:rgba(0,255,0,0.3);}
+}
+
+@-webkit-keyframes livedown {
+    0%  { background:rgba(255,0,0,0.3);}
+    50%  { background:rgba(255,0,0,0.6);}
+    100%  { background:rgba(255,0,0,0.3);}
+}
+@-moz-keyframes livedown {
+    0%  { background:rgba(255,0,0,0.3);}
+    50%  { background:rgba(255,0,0,0.6);}
+    100%  { background:rgba(255,0,0,0.3);}
+}
+@keyframes livedown {
+    0%  { background:rgba(255,0,0,0.3);}
+    50%  { background:rgba(255,0,0,0.6);}
+    100%  { background:rgba(255,0,0,0.3);}
+}
+.crypto-404 {
+    text-align: center;
+    font-size: 150%;
+    padding: 30px 0;
+    position: relative;
+	z-index: 1;
+	background-color: white;
+}
+.crypto-404:before {
+    position: absolute;
+    content: '';
+    border-bottom: 1px solid #d7d7d7;
+    height: 1px;
+    width: 80%;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    margin: auto;
+    text-align: center;
+    right: 0;
+}
+.crypto-404:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 30%;
+    height: 100%;
+    z-index: -1;
+    background: white;
+}
+
+.cryptoboxes .odometer.odometer-auto-theme,
+.cryptoboxes .odometer.odometer-theme-default {
+	display: inline-block;
+	vertical-align: middle;
+	*vertical-align: auto;
+	*zoom: 1;
+	*display: inline;
+	position: relative;
+}
+.cryptoboxes .odometer.odometer-auto-theme .odometer-digit,
+.cryptoboxes .odometer.odometer-theme-default .odometer-digit {
+	*vertical-align: auto;
+	*zoom: 1;
+	*display: inline;
+	position: relative;
+}
+.cryptoboxes .odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer,
+.cryptoboxes .odometer.odometer-theme-default .odometer-digit .odometer-digit-spacer {
+	*vertical-align: auto;
+	*zoom: 1;
+	*display: inline;
+	visibility: hidden;
+}
+.cryptoboxes .odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner,
+.cryptoboxes .odometer.odometer-theme-default .odometer-digit .odometer-digit-inner {
+	text-align: left;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+}
+.cryptoboxes .odometer.odometer-auto-theme .odometer-digit .odometer-ribbon,
+.cryptoboxes .odometer.odometer-theme-default .odometer-digit .odometer-ribbon {
+	display: block;
+}
+.cryptoboxes .odometer.odometer-auto-theme .odometer-digit .odometer-ribbon-inner,
+.cryptoboxes .odometer.odometer-theme-default .odometer-digit .odometer-ribbon-inner {
+	display: block;
+	-webkit-backface-visibility: hidden;
+}
+.cryptoboxes .odometer.odometer-auto-theme .odometer-digit .odometer-value,
+.cryptoboxes .odometer.odometer-theme-default .odometer-digit .odometer-value {
+	display: block;
+	-webkit-transform: translateZ(0);
+}
+.cryptoboxes .odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value,
+.cryptoboxes .odometer.odometer-theme-default .odometer-digit .odometer-value.odometer-last-value {
+	position: absolute;
+}
+.cryptoboxes .odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner,
+.cryptoboxes .odometer.odometer-theme-default.odometer-animating-up .odometer-ribbon-inner {
+	-webkit-transition: -webkit-transform 2s;
+	-moz-transition: -moz-transform 2s;
+	-ms-transition: -ms-transform 2s;
+	-o-transition: -o-transform 2s;
+	transition: transform 2s;
+}
+.cryptoboxes .odometer.odometer-auto-theme.odometer-animating-up.odometer-animating .odometer-ribbon-inner,
+.cryptoboxes .odometer.odometer-theme-default.odometer-animating-up.odometer-animating .odometer-ribbon-inner {
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	-o-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+.cryptoboxes .odometer.odometer-auto-theme.odometer-animating-down .odometer-ribbon-inner,
+.cryptoboxes .odometer.odometer-theme-default.odometer-animating-down .odometer-ribbon-inner {
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	-o-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+.cryptoboxes .odometer.odometer-auto-theme.odometer-animating-down.odometer-animating .odometer-ribbon-inner,
+.cryptoboxes .odometer.odometer-theme-default.odometer-animating-down.odometer-animating .odometer-ribbon-inner {
+	-webkit-transition: -webkit-transform 2s;
+	-moz-transition: -moz-transform 2s;
+	-ms-transition: -ms-transform 2s;
+	-o-transition: -o-transform 2s;
+	transition: transform 2s;
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0);
+}
+.cryptoboxes .odometer.odometer-auto-theme .odometer-value,
+.cryptoboxes .odometer.odometer-theme-default .odometer-value {
+	text-align: center;
+}
+.cryptoboxes .odometer.odometer-auto-theme .odometer-inside {
+    display: flex;
+    align-items: center;
+}
+
+/* table reset */
+.cryptoboxes table.dataTable {
+    table-layout: auto;
+    display: table;
+}
+.cryptoboxes table.dataTable tbody {
+    display: table-row-group;
+}
+.cryptoboxes table.dataTable,
+.cryptoboxes table.dataTable th,
+.cryptoboxes table.dataTable td {
+    border: none;
+}
+.cryptoboxes table.dataTable thead .sorting {
+    background-image: url("/modules/8a95eac0/assets/public/img/sort_both.png");
+}
+.cryptoboxes table.dataTable thead .sorting_asc {
+    background-image: url("/modules/8a95eac0/assets/public/img/sort_asc.png");
+}
+.cryptoboxes table.dataTable thead .sorting_desc {
+    background-image: url("/modules/8a95eac0/assets/public/img/sort_desc.png");
+}
+.cryptoboxes table.dataTable thead .sorting_asc_disabled {
+    background-image: none;
+}
+.cryptoboxes table.dataTable thead .sorting_desc_disabled {
+    background-image: none;
+}
+.cryptoboxes table.dataTable.display tbody tr,
+.cryptoboxes table.dataTable.display tbody tr > .sorting_1,
+.cryptoboxes table.dataTable.display tbody tr > .sorting_2,
+.cryptoboxes table.dataTable.display tbody tr > .sorting_3,
+.cryptoboxes table.dataTable.display tbody tr.odd > .sorting_1,
+.cryptoboxes table.dataTable.display tbody tr.even > .sorting_1,
+.cryptoboxes table.dataTable.hover tbody tr:hover,
+.cryptoboxes table.dataTable.display tbody tr:hover,
+.cryptoboxes .dataTables_wrapper .dataTables_processing {
+    background: none;
+}
+.cryptoboxes table.dataTable.display tbody th,
+.cryptoboxes table.dataTable.display tbody td {
+    border-top: none;
+}
+.cryptoboxes table.dataTable.no-footer,
+.cryptoboxes .dataTables_wrapper.no-footer .dataTables_scrollBody {
+    border-bottom: none;
+}
+.cryptoboxes .dataTables_wrapper .DTFC_LeftBodyLiner,
+.cryptoboxes .dataTables_wrapper .DTFC_RightBodyLiner {
+    overflow-y: unset !important;
+}
+/* styles */
+.mcw-table {
+    width: 100%;
+    color: #656565;
+	background: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    border: 1px solid rgba(0,0,0,0.07);
+	overflow: hidden;
+	border-radius: 5px;
+    box-shadow: 0 8px 16px 0 rgba(40,40,90,.09), 0 3px 6px 0 rgba(0,0,0,.065);
+}
+.mcw-table .title-bar {
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+    font-weight: bold;
+    padding: 14px;
+	letter-spacing: 1px;
+	text-align: left;
+}
+.cryptoboxes table.dataTable thead th {
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    color: #6B6F82;
+    background-color: #fff;
+    text-align: right;
+    padding: 14px 36px 14px 18px;
+    border-color: rgba(0,0,0,0.07);
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    text-transform: uppercase;
+    float: none;
+}
+.cryptoboxes table.dataTable tbody td {
+    color: #37414a;
+    padding: 8px 18px;
+    text-align: right;
+    outline: none;
+	vertical-align: middle;
+}
+.mcw-table .dataTables-footer {
+    background: #F3F7FA;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    border-top: 1px solid rgba(0,0,0,0.07);
+}
+.cryptoboxes table.dataTable thead .sorting,
+.cryptoboxes table.dataTable thead .sorting_asc,
+.cryptoboxes table.dataTable thead .sorting_desc,
+.cryptoboxes table.dataTable thead .sorting_asc_disabled,
+.cryptoboxes table.dataTable thead .sorting_desc_disabled {
+    background-repeat: no-repeat;
+    background-position: center right 10px;
+}
+.cryptoboxes table.dataTable.display tbody tr.even {
+    background-color: #fff;
+}
+.cryptoboxes table.dataTable.display tbody tr.odd,
+.cryptoboxes table.dataTable.display tbody tr:nth-child(odd) > td  {
+    background-color: #F8FAFB;
+}
+.cryptoboxes .dataTables_wrapper .dataTables_length {
+    color: rgba(74,89,106,.4);
+    font-size: 0.9em;
+}
+.cryptoboxes .dataTables_wrapper .dataTables_length select {
+    outline: none;
+    display: inline-block;
+    background-color: transparent;
+    width: 55px;
+    padding: 2px;
+    border: 1px solid #d6d6d6;
+    border-radius: 3px;
+    height: auto;
+    font-size: 14px;
+    margin-left: 8px;
+    color: rgba(74,89,106,.7);
+    font-weight: bold;
+}
+.cryptoboxes .dataTables_wrapper .dataTables_paginate {
+    padding-top: 0;
+}
+.cryptoboxes .dataTables_wrapper .dataTables_paginate .paginate_button.disabled {
+    display: none;
+}
+.cryptoboxes .dataTables_wrapper .dataTables_paginate .paginate_button {
+    position: relative;
+    color: rgba(74,89,106,.7) !important;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+.cryptoboxes .dataTables_wrapper .dataTables_paginate .paginate_button.info {
+    cursor: default;
+}
+.cryptoboxes .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    color: rgba(74,89,106,.7) !important;
+    background: none;
+    box-shadow: none;
+    border: 1px solid transparent;
+}
+.cryptoboxes .dataTables_wrapper .dataTables_paginate .paginate_button.previous::before, .cryptoboxes .dataTables_wrapper .dataTables_paginate .paginate_button.next::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-radius: 5px;
+}
+.cryptoboxes .dataTables_wrapper .dataTables_paginate .paginate_button.previous::before {
+    left: 0;
+    border-right: 7px solid rgba(74,89,106,.7);
+}
+.cryptoboxes .dataTables_wrapper .dataTables_paginate .paginate_button.next::before {
+    right: 0;
+    border-left: 7px solid rgba(74,89,106,.7);
+}
+.cryptoboxes .dataTables_wrapper .dataTables_paginate .paginate_button.previous.disabled::before {
+    border-right: 7px solid rgba(74,89,106,.2);
+}
+.cryptoboxes .dataTables_wrapper .dataTables_paginate .paginate_button.next.disabled::before {
+    border-left: 7px solid rgba(74,89,106,.2);
+}
+.cryptoboxes table.dataTable thead th.text-left, .cryptoboxes table.dataTable tbody td.text-left {
+    text-align: left;
+}
+.cryptoboxes table.dataTable tbody .coin, .cryptoboxes table.dataTable tbody .coin-image {
+    display: flex;
+	align-items: center;
+	padding: 2px;
+}
+.cryptoboxes table.dataTable tbody .coin .coin-image img {
+    padding: 0;
+    max-width: 35px;
+    margin-right: 10px;
+}
+.cryptoboxes table.dataTable.dtr-column.collapsed tbody td.ctrl .coin .coin-image img {
+    max-width: 25px;
+}
+.cryptoboxes table.dataTable.dtr-column.collapsed tbody td.ctrl .coin .coin-name {
+    display: none;
+}
+.cryptoboxes table.dataTable.dtr-column.collapsed tbody td.ctrl .coin .coin-symbol {
+    color: #6d6d6d;
+    font-weight: bold;
+}
+.cryptoboxes table.dataTable.dtr-column.collapsed tbody td.ctrl .coin a.coin-title .coin-symbol {
+    color: #2e7ad0;
+}
+.cryptoboxes table.dataTable tbody .coin .coin-title {
+    font-size: 15px;
+}
+.cryptoboxes table.dataTable tbody .coin .coin-title .coin-name,
+.cryptoboxes table.dataTable tbody .coin .coin-title .coin-symbol {
+    line-height: 1.5;
+}
+.cryptoboxes table.dataTable tbody .coin .coin-title .coin-name {
+    font-weight: bold;
+    color: #6d6d6d;
+    font-size: 1.1em;
+}
+.cryptoboxes table.dataTable tbody .coin a.coin-title {
+    box-shadow: none;
+    text-decoration: none;
+}
+.cryptoboxes table.dataTable tbody .coin a.coin-title .coin-name {
+    color: #2e7ad0;
+}
+.cryptoboxes table.dataTable tbody .coin .coin-title .coin-symbol {
+    color: #999;
+    font-size: 0.9em;
+}
+.cryptoboxes table.dataTable tbody .up {
+    color: #00b600;
+}
+.cryptoboxes table.dataTable tbody .down {
+    color: #fb0000;
+}
+.cryptoboxes table.dataTable tbody canvas {
+    width: 100% !important;
+    height: 50px !important;
+}
+.cryptoboxes table.dataTable tbody .chart-wrapper {
+    width: 190px;
+    min-width: 150px;
+    max-width: 190px;
+}
+.cryptoboxes table.dataTable.dtr-column tbody td {
+    font-size: 14px;
+}
+@media (max-width: 768px) {
+    .dataTables-footer {
+        flex-direction: column;
+    }
+}
+
+/* loader */
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: -200% 0%;
+    }
+}
+.mcw-table .loader {
+    position: relative;
+    width: 100%;
+    height: 0;
+    display: none;
+	transition: opacity 200ms ease;
+}
+.mcw-table .loader.show {
+	display: block;
+}
+.mcw-table .loader::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, red 0%, yellow 15%, lime 30%, cyan 50%, blue 65%, magenta 80%, red 100%);
+    background-size: 200%;
+    animation: moveGradient 5s linear infinite;
+}
+
+/* dark */
+.mcw-table.dark {
+    color: #fff;
+    background: #293145;
+    border: 1px solid rgba(83,101,140,0.33);
+}
+.mcw-table.dark table.dataTable thead th {
+    color: #ccd9e8;
+    background-color: #293145;
+    border-color: rgba(83,101,140,0.33);
+}
+.mcw-table.dark .title-bar {
+    border-bottom: 1px solid rgba(83,101,140,0.33);
+}
+.mcw-table.dark table.dataTable tbody td,
+.mcw-table.dark table.dataTable tbody .coin .coin-title .coin-name {
+    color: #ccd9e8;
+}
+.mcw-table.dark table.dataTable.display tbody tr.even {
+    background-color: #293145;
+}
+.mcw-table.dark table.dataTable.display tbody tr.odd,
+.mcw-table.dark table.dataTable.display tbody > tr:nth-child(odd) > td {
+    background-color: #313a50;
+}
+
+.mcw-table.dark .dataTables-footer {
+    background: rgba(18,22,41,0.22);
+}
+.mcw-table.dark .coin .coin-title .coin-name {
+    color: #ddd;
+}
+.mcw-table.dark .dataTables_wrapper .dataTables_length,
+.mcw-table.dark .dataTables_wrapper .dataTables_length select,
+.mcw-table.dark .dataTables_wrapper .dataTables_paginate .paginate_button {
+    color: #B7BAC6 !important;
+}
+.mcw-table.dark .dataTables_wrapper .dataTables_paginate .paginate_button.previous::before {
+    left: 0;
+    border-right: 7px solid #B7BAC6;
+}
+.mcw-table.dark .dataTables_wrapper .dataTables_paginate .paginate_button.next::before {
+    right: 0;
+    border-left: 7px solid #B7BAC6;
+}
+.mcw-table.dark table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child:before,
+.mcw-table.dark table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child:before,
+.mcw-table.dark table.dataTable.dtr-column.collapsed > tbody > tr > td.ctrl:before,
+.mcw-table.dark table.dataTable.dtr-column.collapsed > tbody > tr > th.ctrl:before {
+    background-color: #424e6f;
+}
+.mcw-table.dark table.dataTable > tbody > tr.child span.dtr-title {
+    color: #ccd9e8;
+}
+.mcw-table.dark table.dataTable > tbody > tr.child ul.dtr-details > li {
+    border-bottom: 1px solid rgba(83,101,140,0.33);
+}
+.mcw-table.dark table.dataTable > tbody > tr.child ul.dtr-details > li:last-child {
+    border-bottom: none;
+}
+.mcw-table.dark table.dataTable > tbody > tr.child > td.child {
+    background: rgba(18,22,41,0.22);
+    border-top: 1px solid rgba(83,101,140,0.33);
+    border-bottom: 1px solid rgba(83,101,140,0.33);
+}
+.mcw-table.dark table.dataTable thead .sorting_asc {
+    background-image: url(/modules/8a95eac0/assets/public/img/sort_asc_dark.png);
+}
+.mcw-table.dark table.dataTable thead .sorting_desc {
+    background-image: url(/modules/8a95eac0/assets/public/img/sort_desc_dark.png);
+}
+.mcw-table.dark table.dataTable thead .sorting {
+    background-image: url(/modules/8a95eac0/assets/public/img/sort_both_dark.png);
+}
+
+/* responsive */
+.cryptoboxes table.dataTable.dtr-inline.collapsed > tbody > tr > td.child,
+.cryptoboxes table.dataTable.dtr-inline.collapsed > tbody > tr > th.child,
+.cryptoboxes table.dataTable.dtr-inline.collapsed > tbody > tr > td.dataTables_empty {
+    cursor: default !important
+}
+.cryptoboxes table.dataTable.dtr-inline.collapsed > tbody > tr > td.child:before,
+.cryptoboxes table.dataTable.dtr-inline.collapsed > tbody > tr > th.child:before,
+.cryptoboxes table.dataTable.dtr-inline.collapsed > tbody > tr > td.dataTables_empty:before {
+    display: none !important
+}
+.cryptoboxes table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child,
+.cryptoboxes table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child {
+    position: relative;
+    padding-left: 60px;
+    cursor: pointer
+}
+.cryptoboxes table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child:before,
+.cryptoboxes table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child:before {
+    top: 50%;
+    left: 15px;
+    display: block;
+    position: absolute;
+    color: white;
+    box-sizing: content-box;
+    text-align: center;
+    text-indent: 0 !important;
+    font-family: 'massive-crypto', sans-serif;
+    line-height: 16px;
+    content: '\6c';
+    background-color: #d0d0d0;
+    padding: 6px;
+    border-radius: 4px;
+    font-size: 1.1em;
+    transform: translateY(-50%);
+}
+.cryptoboxes table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before,
+.cryptoboxes table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before {
+    content: '\67';
+}
+.cryptoboxes table.dataTable.dtr-inline.collapsed.compact > tbody > tr > td:first-child,
+.cryptoboxes table.dataTable.dtr-inline.collapsed.compact > tbody > tr > th:first-child {
+    padding-left: 27px
+}
+.cryptoboxes table.dataTable.dtr-inline.collapsed.compact > tbody > tr > td:first-child:before,
+.cryptoboxes table.dataTable.dtr-inline.collapsed.compact > tbody > tr > th:first-child:before {
+    top: 5px;
+    left: 4px;
+    height: 14px;
+    width: 14px;
+    border-radius: 14px;
+    line-height: 14px;
+    text-indent: 3px
+}
+.cryptoboxes table.dataTable.dtr-column.collapsed > tbody > tr > td.ctrl,
+.cryptoboxes table.dataTable.dtr-column.collapsed > tbody > tr > th.ctrl {
+    position: relative;
+    padding-left: 60px;
+    cursor: pointer
+}
+.cryptoboxes table.dataTable.dtr-column.collapsed > tbody > tr > td.ctrl:before,
+.cryptoboxes table.dataTable.dtr-column.collapsed > tbody > tr > th.ctrl:before {
+    top: 50%;
+    left: 15px;
+    display: block;
+    position: absolute;
+    color: white;
+    box-sizing: content-box;
+    text-align: center;
+    text-indent: 0 !important;
+    font-family: 'massive-crypto', sans-serif;
+    line-height: 16px;
+    content: '\6c';
+    background-color: #d0d0d0;
+    padding: 6px;
+    border-radius: 4px;
+    font-size: 1.1em;
+    transform: translateY(-50%);
+}
+.cryptoboxes table.dataTable.dtr-column > tbody > tr.parent td.ctrl:before,
+.cryptoboxes table.dataTable.dtr-column > tbody > tr.parent th.ctrl:before {
+    content: '\67';
+}
+.cryptoboxes table.dataTable > tbody > tr.child > td.child {
+    background: #F3F7FA;
+    border-top: 1px solid rgba(0,0,0,0.07);
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+.cryptoboxes table.dataTable > tbody > tr.child {
+    padding: 0.5em 1em
+}
+.cryptoboxes table.dataTable > tbody > tr.child:hover {
+    background: transparent !important
+}
+.cryptoboxes table.dataTable > tbody > tr.child ul.dtr-details {
+    width: 100%;
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0
+}
+.cryptoboxes table.dataTable > tbody > tr.child ul.dtr-details > li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #efefef;
+    margin: 0;
+    padding: 0.5em 0;
+    text-align: left;
+}
+.cryptoboxes table.dataTable > tbody > tr.child ul.dtr-details > li:first-child {
+    padding-top: 0
+}
+.cryptoboxes table.dataTable > tbody > tr.child ul.dtr-details > li:last-child {
+    border-bottom: none
+}
+.cryptoboxes table.dataTable > tbody > tr.child span.dtr-title {
+    color: #6d6d6d;
+    display: inline-block;
+    min-width: 75px;
+    font-weight: bold
+}
+div.dtr-modal {
+    position: fixed;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    padding: 10em 1em
+}
+div.dtr-modal div.dtr-modal-display {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    margin: auto;
+    z-index: 102;
+    overflow: auto;
+    background-color: #f5f5f7;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6)
+}
+div.dtr-modal div.dtr-modal-content {
+    position: relative;
+    padding: 1em
+}
+div.dtr-modal div.dtr-modal-close {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #eaeaea;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 12
+}
+div.dtr-modal div.dtr-modal-close:hover {
+    background-color: #eaeaea
+}
+div.dtr-modal div.dtr-modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 101;
+    background: rgba(0, 0, 0, 0.6)
+}
+@media screen and (max-width: 767px) {
+    div.dtr-modal div.dtr-modal-display {
+        width: 95%
+    }
+}
+
+/* list */
+.mcw-list {
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    border-radius: 5px;
+}
+.mcw-list-shadow {
+    border: 1px solid rgba(0,0,0,0.07);
+    box-shadow: 0 2px 3px 0 rgba(40,40,90,.09), 0 3px 6px 0 rgba(0,0,0,.065);
+}
+.mcw-list .mcw-list-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row; 
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.mcw-list .mcw-list-row:last-child {
+    border-bottom: none !important;
+}
+.mcw-list .mcw-list-column {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px 18px 0 18px;
+}
+.mcw-list .mcw-list-column .coin-img {
+    margin-right: 10px;
+}
+.mcw-list-price {
+    opacity: 1;
+    padding: 4px;
+    transition: opacity 0.5s ease-in;
+}
+.mcw-list-change {
+    position: relative;
+    margin-left: 40px;
+}
+.mcw-list-change.down {
+    color: #ff3026;
+}
+.mcw-list-change.up {
+    color: #13c24e;
+}
+.mcw-list-change.down::before, .mcw-list-change.up::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-60%);
+    border-radius: 2px;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+}
+.mcw-list-change.down::before {
+    border-top: 10px solid red;
+}
+.mcw-list-change.up::before {
+    border-bottom: 10px solid #13c24e;
+}
+
+/* themes */
+.mcw-list.mcw-white-theme .mcw-list-row {
+    border-bottom: 1px solid #e6e6e6;
+}
+.mcw-list-2 .mcw-white-theme .mcw-list-header i::before, .mcw-list-2 .mcw-white-theme .mcw-list-header i::after {
+    background: #565656;
+}
+.mcw-list.mcw-dark-theme .mcw-list-row {
+    border-bottom: 1px solid rgba(83,101,140,0.33);
+}
+.mcw-list.mcw-danger-theme .mcw-list-change.down {
+    color: #880600;
+}
+.mcw-list.mcw-danger-theme .mcw-list-change.down::before {
+    border-top: 10px solid #880600;
+}
+
+
+.mcw-list-2 {
+    background: none;
+}
+.mcw-list-2.mcw-list-shadow {
+    border: none;
+    box-shadow: none;
+}
+.mcw-list-2 .mcw-list-item {
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.mcw-list-2  .mcw-list-body {
+    display: none;
+    width: 100%;
+    text-align: left;
+}
+.mcw-list-2 .mcw-list-body .mcw-list-price {
+    margin-left: 25px;
+    font-size: 2em;
+    display: inline-block;
+}
+.mcw-list-2 .mcw-list-body .mcw-list-price .symbol {
+    font-size: 0.6em;
+    vertical-align: super;
+    display: inline;
+}
+.mcw-list-2 .mcw-list-header {
+    cursor: pointer;
+    position: relative;
+    padding-right: 30px;
+}
+.mcw-list-2 .mcw-list-header i {
+    position: absolute;
+    right: 30px;
+}
+.mcw-list-2 .mcw-list-header i::before, .mcw-list-header i::after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    width: 3px;
+    height: 9px;
+    transition: all 0.25s ease-in-out;
+}
+.mcw-list-2 .mcw-list-header i::before {
+    transform: translate(2px, 0) rotate(45deg);
+}
+.mcw-list-2 .mcw-list-header i::after {
+    transform: translate(-2px, 0) rotate(-45deg);
+}
+.mcw-list-2 .mcw-list-item.active .mcw-list-header i::before {
+    transform: translate(-2px, 0) rotate(45deg);
+}
+.mcw-list-2 .mcw-list-item.active .mcw-list-header i::after {
+    transform: translate(2px, 0) rotate(-45deg);
+}
+.mcw-list-2 .mcw-list-item.active .mcw-list-header .mcw-list-price {
+    opacity: 0;
+}
+
+.mcw-list-3 .inline-chart {
+    max-width: 200px;
+    padding-left: 30px;
+}
+.mcw-list-3 .mcw-list-column {
+    justify-content: space-between;
+}
+
+/* box */
+.mcw-box {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+.mcw-box.mcw-white-theme {
+    border: 1px solid #e6e6e6;
+}
+.mcw-box-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.mcw-box-row {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.mcw-box-content.center {
+    flex-direction: column;
+    justify-content: center;
+}
+.mcw-box-price-wrapper {
+    font-size: 1.5em !important;
+    font-weight: bold !important;
+}
+.mcw-box-price-wrapper .mcw-price-symbol {
+    opacity: 0.4;
+}
+.mcw-box .chart-offset {
+    display: none;
+}
+.mcw-box-2 .mcw-list-change {
+    font-size: 1rem;
+}
+.mcw-box-3 .mcw-box-price-wrapper {
+    font-size: 2em !important;
+    margin-top: 20px;
+}
+.mcw-box-4 .mcw-box-price-wrapper {
+    padding: 10px;
+}
+.mcw-box-converter {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.mcw-box-converter .mcw-box-separator {
+    padding: 0 20px;
+}
+.mcw-box-converter .mcw-box-select {
+    flex: 1;
+}
+.mcw-box-converter .mcw-select-wrapper, .mcw-box-converter select {
+    width: 100%;
+}
+.mcw-box-6 .mcw-box-column {
+    display: flex;
+    align-items: center;
+}
+.mcw-box-6 .coin-img {
+    margin-right: 10px;
+}
+.mcw-box-6 .mcw-box-content {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.mcw-box-6.mcw-white-theme .mcw-box-content {
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.mcw-select-wrapper {
+  display: inline-block;
+  position: relative;
+  border-radius: 6px;
+}
+.mcw-select-wrapper:after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    right: 16px;
+    border: solid #ddd;
+    border-width: 0 3px 3px 0;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    border-radius: 1px;
+}
+
+.mcw-select-wrapper select {
+    padding: 10px 40px 10px 10px;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #ddd;
+    background-color: transparent;
+    border-radius: 5px;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    z-index: 10;
+    outline: none;
+    font-weight: bold;
+    color: inherit;
+    height: auto;
+}
+.mcw-select-wrapper select option {
+    color: #000;
+}
+
+/* text */
+.cryptoboxes .mcw-text {
+    padding: 10px;
+    background: #fff;
+    border: 5px solid rgb(238, 238, 238);
+    border-radius: 5px;
+}
+.cryptoboxes .mcw-text h4 {
+    font-size: 2em;
+    font-weight: bold;
+}
+.cryptoboxes .mcw-box-title {
+    opacity: 0.6;
+    flex-basis: 40%;
+}
+.cryptoboxes .mcw-box-shortcode {
+    color: #555;
+    padding-top: 10px;
+    font-weight: bold !important;
+}
+
+/* multicurrency */
+.mcw-multi-tabs {
+    overflow: hidden;
+}
+.mcw-multi-tabs .mcw-list-row {
+    padding: 10px 15px;
+}
+.mcw-multi-tabs .mcw-list-column {
+    padding: 0;
+}
+.mcw-multi-tabs.mcw-white-theme {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.mcw-tabs {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+}
+.mcw-white-theme .mcw-tabs {
+    background: rgba(0, 0, 0, 0.1);
+}
+.mcw-tabs .mcw-tab {
+    position: relative;
+    width: 100%;
+    padding: 15px 10px;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+}
+.mcw-tabs .mcw-tab span {
+    position: relative;
+    z-index: 10;
+}
+.mcw-tabs .mcw-tab-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 100%;
+    z-index: 1;
+    transition: top .3s;
+}
+.mcw-tabs .mcw-tab.active .mcw-tab-bg {
+    top: 0;
+}
+.mcw-tab-content {
+    display: none;
+}
+.mcw-tab-content.active {
+    display: block;
+}
+.mcw-tab-content .mcw-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px dashed rgba(255,255,255,0.1);
+}
+
+/* news */
+ul.mcw-news {
+    list-style: none;
+    text-align: left;
+}
+ul.mcw-news li {
+    color: #495057;
+    padding-bottom: 20px;
+    line-height: 1.5em;
+}
+ul.mcw-news .mcw-n-single {
+    display: flex;
+}
+ul.mcw-news .mcw-n-media {
+    margin-right: 20px;
+}
+ul.mcw-news .mcw-n-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    background-image: url(/modules/8a95eac0/assets/public/img/rss.png);
+    background-size: cover;
+    background-position: center;
+}
+ul.mcw-news .mcw-n-content {
+    width: 100%;
+}
+ul.mcw-news a.mcw-n-title {
+    color: #495057;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+}
+ul.mcw-news a.mcw-n-title:hover {
+    text-decoration: underline;
+}
+ul.mcw-news .mcw-n-stat {
+    color: #abb0b5;
+}
+.cryptoboxes .mcw-changelly {
+    margin: 16px auto;
+    width: 100%;
+    height: 416px;
+}
+/* RTL Style */
+.cryptoboxes[dir="rtl"] .cc-stats,
+.cryptoboxes[dir="rtl"] .cc-stats .cc-dup {
+    display: inline-flex;
+}
+
+.cryptoboxes[dir="rtl"] .cc-stats,
+.cryptoboxes[dir="rtl"] .cc-stats .cc-dup {
+    flex-direction: row-reverse;
+}
+
+.cryptoboxes[dir="rtl"] .cc-stats .cc-coin .coin-img {
+    margin-left: 10px;
+    margin-right: 0;
+}
+.cryptoboxes[dir="rtl"] .cc-stats .cc-coin > div {
+    width: 25px;
+    direction: ltr;
+}
